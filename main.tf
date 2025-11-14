@@ -24,7 +24,7 @@ resource "terraform_data" "main" {
     host     = aws_instance.main.private_ip
   }
 
-  # terraform copies this file to catalogue server
+ 
   provisioner "file" {
     source = "bootstrap.sh"
     destination = "/tmp/bootstrap.sh"
